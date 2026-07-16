@@ -35,7 +35,13 @@ CREATE TABLE Classroom (
 );
 
 
-INSERT (5+ rows)
+INSERT INTO Classroom (classroom_id, room_number, building, capacity)
+VALUES
+(001, '101', 'Science Building', 40),
+(002, '102', 'Fine Arts Center', 50),
+(003, '103', 'Language Lab', 30),
+(004, '104', 'Technology Laboratory', 25),
+(005, '105', 'Leadership Center', 50);
 
 
 UPDATE
