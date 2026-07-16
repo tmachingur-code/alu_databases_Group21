@@ -27,7 +27,12 @@ SELECT with WHERE
 -- MEMBER B: CLASSROOM TABLE
 -- ============================================================
 
-CREATE TABLE
+CREATE TABLE Classroom (
+    classroom_id INT AUTO_INCREMENT PRIMARY KEY,
+    room_number varchar(10) not null,
+    building VARCHAR(50) not null,
+    capacity INT not null
+);
 
 
 INSERT (5+ rows)
