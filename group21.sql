@@ -49,7 +49,8 @@ SET capacity = 45
 WHERE classroom_id = 001;
 
 
-DELETE
+DELETE FROM Classroom
+WHERE classroom_id = 005;
 
 
 SELECT with WHERE
