@@ -44,7 +44,9 @@ VALUES
 (005, '105', 'Leadership Center', 50);
 
 
-UPDATE
+UPDATE Classroom
+SET capacity = 45
+WHERE classroom_id = 001;
 
 
 DELETE
