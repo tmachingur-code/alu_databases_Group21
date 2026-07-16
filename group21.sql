@@ -53,7 +53,8 @@ DELETE FROM Classroom
 WHERE classroom_id = 005;
 
 
-SELECT with WHERE
+SELECT * FROM Classroom
+WHERE building = 'Science Building';
 
 
 -- ============================================================
