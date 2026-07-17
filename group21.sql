@@ -199,10 +199,16 @@ VALUES
 (2, 3),
 (3, 2),
 (4, 4);
-DELETE
 
+UPDATE Extra_Curricular_Activities
+SET faculty_advisor_id = 2
+WHERE activity_id = 4;
 
-SELECT with WHERE
+DELETE FROM Extra_Curricular_Activities
+WHERE activity_id = 5;
+
+SELECT * FROM Extra_Curricular_Activities
+WHERE category = 'Academic';
 
 
 -- ============================================================
