@@ -80,7 +80,17 @@ SELECT with WHERE
 -- MEMBER D: COURSES TABLE
 -- ============================================================
 
-CREATE TABLE
+CREATE TABLE Course (
+	course_id  INT AUTO_INCREMENT PRIMARY KEY,
+	course_name  VARCHAR(100) NOT NULL,
+	credits  INT NOT NULL,
+	faculty_id  INT NOT NULL,
+	classroom_id  INT NOT NULL,
+	CONSTRAINT fk_courses_faculty
+	   FOREIGN KEY (faculty_id) REFERENCES Faculty(faculty_id)
+	CONSTRAINT fk_courses_classroom
+	   FOREIGN KEY (classroom_id) REFERENCES Classroom(classroom_id)
+);
 
 
 INSERT (5+ rows)
