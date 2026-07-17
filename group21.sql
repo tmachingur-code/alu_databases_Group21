@@ -107,7 +107,7 @@ WHERE department = 'Computer Science';
 -- MEMBER D: COURSES TABLE
 -- ============================================================
 
-CREATE TABLE Course (
+CREATE TABLE Courses (
 	course_id  INT AUTO_INCREMENT PRIMARY KEY,
 	course_name  VARCHAR(100) NOT NULL,
 	credits  INT NOT NULL,
@@ -120,7 +120,13 @@ CREATE TABLE Course (
 );
 
 
-INSERT (5+ rows)
+INSERT into Course (course_name, credits, faculty_id, classroom_id) VALUES
+('Introduction to Programming', 3, 1, 1),
+('Calculus I', 3, 2, 3),
+('Studio Art', 2, 3, 2),
+('French Language', 3, 4, 3),
+('Data Structures', 4, 1, 4);
+
 
 
 UPDATE
