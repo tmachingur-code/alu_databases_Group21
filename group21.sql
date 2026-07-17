@@ -4,37 +4,6 @@
 CREATE DATABASE IF NOT EXISTS group21;
 USE group21;
 
--- ============================================================
--- MEMBER A: STUDENTS TABLE
--- ============================================================
-CREATE TABLE Students (
-    student_id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    classroom_id INT,
-    enrollment_date DATE NOT NULL,
-    FOREIGN KEY (classroom_id) REFERENCES Classroom(classroom_id)
-);
-
-INSERT INTO Students (name, email, classroom_id, enrollment_date)
-VALUES
-('Tess Ikenwe', 'tess.ikenwe@alu.edu', 1, '2024-09-02'),
-('Aline Uwase', 'aline.uwase@alu.edu', 2, '2024-09-02'),
-('Eric Mugisha', 'eric.mugisha@alu.edu', 1, '2024-09-03'),
-('Grace Niyonsaba', 'grace.niyonsaba@alu.edu', 3, '2024-09-03'),
-('David Habimana', 'david.habimana@alu.edu', 4, '2024-09-04');
-
-UPDATE Students
-SET email = 'tess.ikenwe2@alu.edu'
-WHERE student_id = 1;
-
-DELETE FROM Students
-WHERE student_id = 5;
-
-SELECT * FROM Students
-WHERE classroom_id = 1;
-
-
 
 -- ============================================================
 -- MEMBER B: CLASSROOM TABLE
@@ -68,6 +37,36 @@ WHERE classroom_id = 005;
 
 SELECT * FROM Classroom
 WHERE building = 'Science Building';
+
+-- ============================================================
+-- MEMBER A: STUDENTS TABLE
+-- ============================================================
+CREATE TABLE Students (
+    student_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    classroom_id INT,
+    enrollment_date DATE NOT NULL,
+    FOREIGN KEY (classroom_id) REFERENCES Classroom(classroom_id)
+);
+
+INSERT INTO Students (name, email, classroom_id, enrollment_date)
+VALUES
+('Tess Ikenwe', 'tess.ikenwe@alu.edu', 1, '2024-09-02'),
+('Aline Uwase', 'aline.uwase@alu.edu', 2, '2024-09-02'),
+('Eric Mugisha', 'eric.mugisha@alu.edu', 1, '2024-09-03'),
+('Grace Niyonsaba', 'grace.niyonsaba@alu.edu', 3, '2024-09-03'),
+('David Habimana', 'david.habimana@alu.edu', 4, '2024-09-04');
+
+UPDATE Students
+SET email = 'tess.ikenwe2@alu.edu'
+WHERE student_id = 1;
+
+DELETE FROM Students
+WHERE student_id = 5;
+
+SELECT * FROM Students
+WHERE classroom_id = 1;
 
 
 -- ============================================================
@@ -114,13 +113,13 @@ CREATE TABLE Courses (
 	faculty_id  INT NOT NULL,
 	classroom_id  INT NOT NULL,
 	CONSTRAINT fk_courses_faculty
-	   FOREIGN KEY (faculty_id) REFERENCES Faculty(faculty_id)
+	   FOREIGN KEY (faculty_id) REFERENCES Faculty(faculty_id),
 	CONSTRAINT fk_courses_classroom
 	   FOREIGN KEY (classroom_id) REFERENCES Classroom(classroom_id)
 );
 
 
-INSERT INTO Course (course_name, credits, faculty_id, classroom_id) VALUES
+INSERT INTO Courses (course_name, credits, faculty_id, classroom_id) VALUES
 ('Introduction to Programming', 3, 1, 1),
 ('Calculus I', 3, 2, 3),
 ('Studio Art', 2, 3, 2),
