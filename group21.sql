@@ -184,9 +184,21 @@ VALUES
 ('Basketball Team', 'Sports', 4),
 ('Coding Club', 'Technology', 1);
 
-UPDATE
+INSERT INTO Student_Courses (student_id, course_id)
+VALUES
+(1, 1),
+(1, 2),
+(2, 1),
+(3, 3),
+(4, 4);
 
-
+INSERT INTO Student_Activities (student_id, activity_id)
+VALUES
+(1, 4),
+(2, 1),
+(2, 3),
+(3, 2),
+(4, 4);
 DELETE
 
 
