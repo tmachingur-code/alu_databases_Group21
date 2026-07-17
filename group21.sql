@@ -7,20 +7,33 @@ USE group21;
 -- ============================================================
 -- MEMBER A: STUDENTS TABLE
 -- ============================================================
+CREATE TABLE Students (
+    student_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    classroom_id INT,
+    enrollment_date DATE NOT NULL,
+    FOREIGN KEY (classroom_id) REFERENCES Classroom(classroom_id)
+);
 
-CREATE TABLE
+INSERT INTO Students (name, email, classroom_id, enrollment_date)
+VALUES
+('Tess Ikenwe', 'tess.ikenwe@alu.edu', 1, '2024-09-02'),
+('Aline Uwase', 'aline.uwase@alu.edu', 2, '2024-09-02'),
+('Eric Mugisha', 'eric.mugisha@alu.edu', 1, '2024-09-03'),
+('Grace Niyonsaba', 'grace.niyonsaba@alu.edu', 3, '2024-09-03'),
+('David Habimana', 'david.habimana@alu.edu', 4, '2024-09-04');
 
+UPDATE Students
+SET email = 'tess.ikenwe2@alu.edu'
+WHERE student_id = 1;
 
-INSERT (5+ rows)
+DELETE FROM Students
+WHERE student_id = 5;
 
+SELECT * FROM Students
+WHERE classroom_id = 1;
 
-UPDATE
-
-
-DELETE
-
-
-SELECT with WHERE
 
 
 -- ============================================================
