@@ -7,20 +7,33 @@ USE group21;
 -- ============================================================
 -- MEMBER A: STUDENTS TABLE
 -- ============================================================
+CREATE TABLE Students (
+    student_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    classroom_id INT,
+    enrollment_date DATE NOT NULL,
+    FOREIGN KEY (classroom_id) REFERENCES Classroom(classroom_id)
+);
 
-CREATE TABLE
+INSERT INTO Students (name, email, classroom_id, enrollment_date)
+VALUES
+('Tess Ikenwe', 'tess.ikenwe@alu.edu', 1, '2024-09-02'),
+('Aline Uwase', 'aline.uwase@alu.edu', 2, '2024-09-02'),
+('Eric Mugisha', 'eric.mugisha@alu.edu', 1, '2024-09-03'),
+('Grace Niyonsaba', 'grace.niyonsaba@alu.edu', 3, '2024-09-03'),
+('David Habimana', 'david.habimana@alu.edu', 4, '2024-09-04');
 
+UPDATE Students
+SET email = 'tess.ikenwe2@alu.edu'
+WHERE student_id = 1;
 
-INSERT (5+ rows)
+DELETE FROM Students
+WHERE student_id = 5;
 
+SELECT * FROM Students
+WHERE classroom_id = 1;
 
-UPDATE
-
-
-DELETE
-
-
-SELECT with WHERE
 
 
 -- ============================================================
@@ -61,20 +74,34 @@ WHERE building = 'Science Building';
 -- MEMBER C: FACULTY TABLE
 -- ============================================================
 
-CREATE TABLE
+CREATE TABLE Faculty (
+    faculty_id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phone_number VARCHAR(20),
+    department VARCHAR(50) NOT NULL,
+    hire_date DATE NOT NULL,
+    salary DECIMAL(10,2)
+);
 
+INSERT INTO Faculty (first_name, last_name, email, phone_number, department, hire_date, salary)
+VALUES
+('Alice', 'Mugisha', 'alice.mugisha@alu.edu', '0781234567', 'Computer Science', '2018-08-15', 65000.00),
+('Brian', 'Kagame', 'brian.kagame@alu.edu', '0782345678', 'Mathematics', '2015-01-10', 60000.00),
+('Chantal', 'Uwase', 'chantal.uwase@alu.edu', '0783456789', 'Fine Arts', '2020-09-01', 55000.00),
+('David', 'Niyonzima', 'david.niyonzima@alu.edu', '0784567890', 'Languages', '2019-03-22', 58000.00),
+('Eva', 'Mukamana', 'eva.mukamana@alu.edu', '0785678901', 'Leadership Studies', '2021-06-05', 62000.00);
 
--INSERT (5+ rows)
+UPDATE Faculty
+SET salary = 68000.00
+WHERE faculty_id = 1;
 
+DELETE FROM Faculty
+WHERE faculty_id = 5;
 
-UPDATE
-
-
-DELETE
-
-
-SELECT with WHERE
-
+SELECT * FROM Faculty
+WHERE department = 'Computer Science';
 
 -- ============================================================
 -- MEMBER D: COURSES TABLE
