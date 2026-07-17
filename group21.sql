@@ -268,4 +268,11 @@ FROM Students s
 JOIN Classroom cl ON s.classroom_id = cl.classroom_i
 
 
--- Aggregate query (COUNT / GROUP BY)
+-- Aggregate query: Number of students enrolled per course
+SELECT
+    c.course_name,
+    COUNT(sc.student_id) AS number_of_students
+FROM Courses c
+LEFT JOIN Student_Courses sc ON c.course_id = sc.course_id
+GROUP BY c.course_id, c.course_name;
+
