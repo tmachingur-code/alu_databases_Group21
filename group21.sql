@@ -145,7 +145,15 @@ WHERE faculty_id = 1;
 -- MEMBER E: EXTRA_CURRICULAR_ACTIVITIES + JUNCTION TABLES
 -- ============================================================
 
-CREATE TABLE 
+CREATE TABLE Extra_Curricular_Activities (
+    activity_id INT AUTO_INCREMENT PRIMARY KEY,
+    activity_name VARCHAR(100) NOT NULL,
+    category VARCHAR(50),
+    faculty_advisor_id INT,
+    CONSTRAINT fk_activities_faculty
+        FOREIGN KEY (faculty_advisor_id) REFERENCES Faculty(faculty_id)
+);
+
 
 
 CREATE TABLE Student_Courses
