@@ -84,8 +84,8 @@ UPDATE Faculty
 SET salary = 68000.00
 WHERE faculty_id = 1;
 
-DELETE
-
+DELETE FROM Faculty
+WHERE faculty_id = 5;
 
 SELECT with WHERE
 
