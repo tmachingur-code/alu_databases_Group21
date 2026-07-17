@@ -176,8 +176,13 @@ CREATE TABLE Student_Activities (
 );
 
 
-INSERT (5+ rows each)
-
+INSERT INTO Extra_Curricular_Activities (activity_name, category, faculty_advisor_id)
+VALUES
+('Chess Club', 'Games', 2),
+('Debate Society', 'Academic', 1),
+('Choir', 'Music', 3),
+('Basketball Team', 'Sports', 4),
+('Coding Club', 'Technology', 1);
 
 UPDATE
 
