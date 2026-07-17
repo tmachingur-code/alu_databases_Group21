@@ -221,9 +221,21 @@ WHERE category = 'Academic';
 -- Faculty, Courses, Extra_Curricular_Activities, or the two
 -- junction tables.
 
-
--- Join query 2
-
+-- ------------------------------------------------------------
+-- Normalization check:
+-- No table repeats data that belongs elsewhere — each entity
+-- (Students, Classroom, Faculty, Courses, Activities) stores
+-- only its own attributes, and relationships between entities
+-- are captured through foreign keys rather than duplicated
+-- columns. The many-to-many relationships (a student can take
+-- many courses and a course can have many students; a student
+-- can join many activities and an activity can have many
+-- students) are correctly handled through the Student_Courses
+-- and Student_Activities junction tables, rather than storing
+-- repeated or comma-separated values inside the Students table
+-- itself. This keeps the schema in a normalized form with no
+-- redundant data.
+-- ------------------------------------------------------------
 
 -- Join query 3
 
