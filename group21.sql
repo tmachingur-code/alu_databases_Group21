@@ -237,7 +237,35 @@ WHERE category = 'Academic';
 -- redundant data.
 -- ------------------------------------------------------------
 
--- Join query 3
+-- Join query 1: Student enrolled in Course, taught by Faculty, in Classroom
+SELECT
+    s.name AS student_name,
+    c.course_name,
+    f.name AS faculty_name,
+    cl.room_number
+FROM Student_Courses sc
+JOIN Students s ON sc.student_id = s.student_id
+JOIN Courses c ON sc.course_id = c.course_id
+JOIN Faculty f ON c.faculty_id = f.faculty_id
+JOIN Classroom cl ON c.classroom_id = cl.classroom_id;
+ 
+-- Join query 2: Student participates in Activity, advised by Faculty
+SELECT
+    s.name AS student_name,
+    a.activity_name,
+    f.name AS advisor_name
+FROM Student_Activities sa
+JOIN Students s ON sa.student_id = s.student_id
+JOIN Extra_Curricular_Activities a ON sa.activity_id = a.activity_id
+JOIN Faculty f ON a.faculty_advisor_id = f.faculty_id;
+ 
+-- Join query 3: Student's classroom and building
+SELECT
+    s.name AS student_name,
+    cl.room_number,
+    cl.building
+FROM Students s
+JOIN Classroom cl ON s.classroom_id = cl.classroom_i
 
 
 -- Aggregate query (COUNT / GROUP BY)
