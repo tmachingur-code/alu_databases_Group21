@@ -120,7 +120,7 @@ CREATE TABLE Courses (
 );
 
 
-INSERT into Course (course_name, credits, faculty_id, classroom_id) VALUES
+INSERT INTO Course (course_name, credits, faculty_id, classroom_id) VALUES
 ('Introduction to Programming', 3, 1, 1),
 ('Calculus I', 3, 2, 3),
 ('Studio Art', 2, 3, 2),
@@ -129,10 +129,11 @@ INSERT into Course (course_name, credits, faculty_id, classroom_id) VALUES
 
 
 
-UPDATE
+UPDATE Courses
+SET credits = 4
+WHERE course_id = 3;
 
-
-DELETE
+DELETE 
 
 
 SELECT with WHERE
