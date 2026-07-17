@@ -154,12 +154,26 @@ CREATE TABLE Extra_Curricular_Activities (
         FOREIGN KEY (faculty_advisor_id) REFERENCES Faculty(faculty_id)
 );
 
+CREATE TABLE Student_Courses (
+    student_id INT,
+    course_id INT,
+    PRIMARY KEY (student_id, course_id),
+    CONSTRAINT fk_studentcourses_student
+        FOREIGN KEY (student_id) REFERENCES Students(student_id),
+    CONSTRAINT fk_studentcourses_course
+        FOREIGN KEY (course_id) REFERENCES Courses(course_id)
+);
 
 
-CREATE TABLE Student_Courses
-
-
-CREATE TABLE Student_Activities
+CREATE TABLE Student_Activities (
+    student_id INT,
+    activity_id INT,
+    PRIMARY KEY (student_id, activity_id),
+    CONSTRAINT fk_studentactivities_student
+        FOREIGN KEY (student_id) REFERENCES Students(student_id),
+    CONSTRAINT fk_studentactivities_activity
+        FOREIGN KEY (activity_id) REFERENCES Extra_Curricular_Activities(activity_id)
+);
 
 
 INSERT (5+ rows each)
