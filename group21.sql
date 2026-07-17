@@ -137,7 +137,8 @@ DELETE FROM Courses
 WHERE course_id = 5; 
 
 
-SELECT with WHERE
+SELECT * FROM Courses
+WHERE faculty_id = 1;
 
 
 -- ============================================================
