@@ -87,8 +87,8 @@ WHERE faculty_id = 1;
 DELETE FROM Faculty
 WHERE faculty_id = 5;
 
-SELECT with WHERE
-
+SELECT * FROM Faculty
+WHERE department = 'Computer Science';
 
 -- ============================================================
 -- MEMBER D: COURSES TABLE
