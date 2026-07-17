@@ -39,8 +39,8 @@ A MySQL relational database for a school system, built as a group assignment.
 
 | Member | Table(s) owned |
 |---|---|
-| Member A | Students |
-| Member B | Classroom |
-| Member C | Faculty |
-| Member D | Courses |
-| Member E | Extra_Curricular_Activities, Student_Courses, Student_Activities |
+| @tikenwe  | Students |
+| @amtoha-prog| Classroom |
+| @rayiecho | Faculty |
+| @airumva2-sudo | Courses |
+| @tmachingur-code | Extra_Curricular_Activities, Student_Courses, Student_Activities |
