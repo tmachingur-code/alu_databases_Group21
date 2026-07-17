@@ -133,7 +133,8 @@ UPDATE Courses
 SET credits = 4
 WHERE course_id = 3;
 
-DELETE 
+DELETE FROM Courses
+WHERE course_id = 5; 
 
 
 SELECT with WHERE
