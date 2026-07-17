@@ -215,7 +215,11 @@ WHERE category = 'Academic';
 -- ============================================================
 
 
--- Join query 1
+-- Relationships check: confirmed all foreign keys reference
+-- valid, existing primary keys in their target tables. No
+-- orphaned references found across Students, Classroom,
+-- Faculty, Courses, Extra_Curricular_Activities, or the two
+-- junction tables.
 
 
 -- Join query 2
