@@ -61,8 +61,16 @@ WHERE building = 'Science Building';
 -- MEMBER C: FACULTY TABLE
 -- ============================================================
 
-CREATE TABLE
-
+CREATE TABLE Faculty (
+    faculty_id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phone_number VARCHAR(20),
+    department VARCHAR(50) NOT NULL,
+    hire_date DATE NOT NULL,
+    salary DECIMAL(10,2)
+);
 
 -INSERT (5+ rows)
 
