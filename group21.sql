@@ -72,8 +72,13 @@ CREATE TABLE Faculty (
     salary DECIMAL(10,2)
 );
 
--INSERT (5+ rows)
-
+INSERT INTO Faculty (first_name, last_name, email, phone_number, department, hire_date, salary)
+VALUES
+('Alice', 'Mugisha', 'alice.mugisha@alu.edu', '0781234567', 'Computer Science', '2018-08-15', 65000.00),
+('Brian', 'Kagame', 'brian.kagame@alu.edu', '0782345678', 'Mathematics', '2015-01-10', 60000.00),
+('Chantal', 'Uwase', 'chantal.uwase@alu.edu', '0783456789', 'Fine Arts', '2020-09-01', 55000.00),
+('David', 'Niyonzima', 'david.niyonzima@alu.edu', '0784567890', 'Languages', '2019-03-22', 58000.00),
+('Eva', 'Mukamana', 'eva.mukamana@alu.edu', '0785678901', 'Leadership Studies', '2021-06-05', 62000.00);
 
 UPDATE
 
