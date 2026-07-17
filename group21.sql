@@ -80,8 +80,9 @@ VALUES
 ('David', 'Niyonzima', 'david.niyonzima@alu.edu', '0784567890', 'Languages', '2019-03-22', 58000.00),
 ('Eva', 'Mukamana', 'eva.mukamana@alu.edu', '0785678901', 'Leadership Studies', '2021-06-05', 62000.00);
 
-UPDATE
-
+UPDATE Faculty
+SET salary = 68000.00
+WHERE faculty_id = 1;
 
 DELETE
 
